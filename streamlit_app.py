@@ -31,6 +31,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 import umap
+import nltk
+nltk.download('wordnet')
 # %matplotlib inline
 
 start = time.time()
@@ -102,8 +104,6 @@ class Interview_report:
         from textblob import TextBlob, Word, Blobber
         answer_clean.apply(lambda x: str(TextBlob(x).correct()))
         answer_clean.head()
-        import nltk
-        nltk.download('wordnet')
         answer_clean = answer_clean.apply(lambda x: " ".join([Word(word).lemmatize() for word in x.split()]))
         interview_len = answer_clean.astype(str).apply(len)
         word_count = answer_clean.apply(lambda x: len(str(x).split()))
