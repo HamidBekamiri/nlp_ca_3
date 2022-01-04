@@ -2,3 +2,4 @@ streamlit
 scipy
 torch
 sklearn
+matplotlib
