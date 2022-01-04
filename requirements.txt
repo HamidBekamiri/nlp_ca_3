@@ -1,2 +1,1 @@
 streamlit
-sentence_transformers
