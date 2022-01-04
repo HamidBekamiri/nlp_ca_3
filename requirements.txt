@@ -5,4 +5,4 @@ sklearn
 matplotlib
 seaborn
 umap
-nltk
+nltk.text
